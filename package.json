@@ -2,9 +2,11 @@
   "name": "xlsx-diff",
   "version": "0.1.0",
   "dependencies": {
+    "diff": "^7.0.0",
     "xlsx": "0.18.5"
   },
   "devDependencies": {
+    "@types/diff": "5.2.2",
     "@types/node": "16.18.107",
     "typescript": "4.9.5"
   },
@@ -23,6 +25,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "watch": "tsc -w",
     "prepack": "bun run build",
     "pack": "npm pack"
   }
