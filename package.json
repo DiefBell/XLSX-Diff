@@ -1,0 +1,14 @@
+{
+  "name": "xlsx-diff",
+  "module": "dist/index.js",
+  "type": "module",
+  "files": [
+	
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
