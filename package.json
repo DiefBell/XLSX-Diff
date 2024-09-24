@@ -1,7 +1,9 @@
 {
   "name": "xlsx-diff",
-  "module": "dist/index.js",
-  "type": "module",
+  "license": "MIT",
+  "authors": [
+	"Dief Bell"
+  ],
   "files": [
 	
   ],
