@@ -31,6 +31,13 @@
 	2. Add the line `*.xlsx diff=xlsx`.
 	3. To be safe, also add `*.XLSX diff=xlsx`.
 
+## API
+If you want to diff or textconv a .xlsx file programatically, for whatever reason, you can do that:
+```js
+import { textconv, diff } from "xlsx-diff";
+textconv("myExcelFile.xlsx");
+```
+
 ## Known Issues and Limitations
 - In VSCode, the nicely formatted visual diff will only be displayed if the XLSX file has been staged.
 This is an issue with VSCode, and not this package, but doesn't seem to be on their backlog as this issue has been closed: https://github.com/microsoft/vscode/issues/168472

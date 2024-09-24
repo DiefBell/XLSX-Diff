@@ -2,6 +2,7 @@
   "name": "xlsx-diff",
   "description": "Custom git diff driver for Microsoft Excel .XLSX files",
   "version": "0.1.0",
+  "main": "dist/lib/index.js",
   "repository": {
 	"url": "https://github.com/DiefBell/XLSX-Diff"
   },
