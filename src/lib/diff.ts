@@ -9,7 +9,6 @@ type UnstagedChangedMetadata = {
 
 	newFileName: string,
 	newFilePath: string,
-	tmpNewFilePath: string,
 }
 
 type XLSXSheetRow = (string | number)[];
@@ -94,7 +93,7 @@ export const diff = (diffMetadata: UnstagedChangedMetadata): void =>
 		oldFileName,
 		oldFilePath,
 		newFileName,
-		tmpNewFilePath
+		newFilePath
 	} = diffMetadata;
 
 	const renamed = oldFileName !== newFileName;
@@ -106,14 +105,14 @@ export const diff = (diffMetadata: UnstagedChangedMetadata): void =>
 		process.exit(1);
 	}
 
-	if(!fs.existsSync(tmpNewFilePath))
+	if(!fs.existsSync(newFilePath))
 	{
-		console.error(`Attempted to diff ${whatDiffText} but could not find file at "${tmpNewFilePath}".`);
+		console.error(`Attempted to diff ${whatDiffText} but could not find file at "${newFilePath}".`);
 		process.exit(1);
 	}
 
 	const jsonOld = _xlsxToJson(oldFilePath);
-	const jsonNew = _xlsxToJson(tmpNewFilePath);
+	const jsonNew = _xlsxToJson(newFilePath);
 	const strOld = JSON.stringify(jsonOld, undefined, 2);
 	const strNew = JSON.stringify(jsonNew, undefined, 2);
 	
