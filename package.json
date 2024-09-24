@@ -1,6 +1,10 @@
 {
   "name": "xlsx-diff",
+  "description": "Custom git diff driver for Microsoft Excel .XLSX files",
   "version": "0.1.0",
+  "repository": {
+	"url": "https://github.com/DiefBell/XLSX-Diff"
+  },
   "dependencies": {
     "diff": "^7.0.0",
     "xlsx": "0.18.5"

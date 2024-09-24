@@ -26,7 +26,7 @@ export const textconv = (filePath: string): void =>
 	}
 
 	workbook.SheetNames.forEach((sheetName) => {
-		// TODO: Need some way of deciding if it has headers?
+		// TODO: Need some way of deciding if it has headers? Maybe based on formatting/colours?
 		// TODO: Also should factor in if the headers are for rows
 		const sheetJson: string[][] = xlsxUtils.sheet_to_json(workbook.Sheets[sheetName], { header: 1 });
 		console.log(`Sheet: ${sheetName}`);
