@@ -1,16 +1,29 @@
 {
   "name": "xlsx-diff",
-  "license": "MIT",
-  "authors": [
-	"Dief Bell"
-  ],
-  "files": [
-	
-  ],
-  "devDependencies": {
-    "@types/bun": "latest"
+  "version": "0.1.0",
+  "dependencies": {
+    "xlsx": "0.18.5"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "devDependencies": {
+    "@types/node": "16.18.107",
+    "typescript": "4.9.5"
+  },
+  "authors": [
+    "Dief Bell"
+  ],
+  "bin": {
+    "xlsx-diff": "dist/cli/diff.js",
+    "xlsx-textconv": "dist/cli/textconv.js"
+  },
+  "files": [
+    "readme.md",
+    "LICENSE.txt",
+    "dist/**"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "bun run build",
+    "pack": "npm pack"
   }
 }

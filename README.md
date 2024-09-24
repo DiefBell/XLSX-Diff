@@ -13,3 +13,10 @@ bun run dist/index.js
 ```
 
 This project was created using `bun init` in bun v1.1.29. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+
+```sh
+git config --local diff.xlsx.textconv "bun xlsx-textconv"
+```
+
+### TODO
+- Filter out leading/trailing empty columns/rows
